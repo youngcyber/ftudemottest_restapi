@@ -19,7 +19,7 @@ jobs:
               password: ${{ secrets.FTP_PASSWORD }}
               remote_path: '/var/www/backend'
               sftp_only: true
-              local_patj: './'
+              local_path: './'
         
 
 
