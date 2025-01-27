@@ -2,20 +2,14 @@ on:
   push:
    branches:
     - main
-name: 🚀 Deploy REST API
+name: 🚀 Deploy Backend on AWS
 jobs:
       web-deploy:
-        name: 🎉 Deploy REST API
+        name: 🎉 Deploy Back-End School Management System
         runs-on: ubuntu-latest
-        strategy:
-          matrix:
-            node-version: [22.x]
         steps:
-          - name: Use Node.js ${{ matrix.node-version }}
-            uses: actions/setup-node@v2
-            with:
-                node-version: ${{ matrix.node-version }}
-                cache: 'npm'
+          - name: 🚚 Get Lastest Production Source Code
+            uses: actions/checkout@v2
           - name: 📂 Deploy to Cloud
             uses: wlixcc/SFTP-Deploy-Action@v1.2.4
             with:
