@@ -4,7 +4,7 @@ const port = 3000;
 
 app.use(express.json());
 
-// Dummy data
+// Dummy dat
 let events = [
     { id: 1, name: 'John Doe', student_id: 'S123', branch: 'CSE', year: '3' },
     { id: 2, name: 'Jane Smith', student_id: 'S124', branch: 'ECE', year: '2' }
